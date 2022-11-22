@@ -1,0 +1,39 @@
+
+                                                    Assignment-1
+Subject:- Software Engineering
+Programming Language :- Python
+Group:- 3
+Submitted by :- SaidiReddy Vangala and Kranthi Kiran Reddy Gurram.
+Submitted on:- 11/22/2022
+Name of the File:- Assignment 1
+Explination:- it's an Infinite Loop in Python. it occurs whien a condition always occurs to be true. it's an error. for Instance we might have  a loop which decrements until it's 
+Zero. or in Python it occurs if the conditon of while loop is always True.
+
+
+n = 0 
+k = 0
+while ((n <= 2) or (n >= 12)):
+    print ("Enter integer n such that 2 < n < 12: ")
+    print (n);
+while (k <= 10):
+    print ("Enter upper limit k for x and y (k > 10)");
+    print (k)
+miss=100
+relativMiss = 100
+for x in range(10,k):
+    for y in range(10,k):
+        lhs=(pow (x, n) + pow (y, n))
+        if (lhs < 0):
+            print ("OVERFLOW ERROR!! Choose lower values of n and k")
+            return 0
+    z = pow (lhs, 1.0/n)
+    diff = lhs - pow (z, n)
+    if ((pow (z + 1, n) - lhs) < diff) :
+            diff = pow (z + 1, n) - lhs
+            z=z+1
+            relDiff = 100. * diff / lhs;
+            if (relDiff < relativMiss):
+                miss = diff;
+                relativMiss = relDiff;
+                printf ("x = %d, y = %d, z = %d, miss = %d, relative miss = %.6f%%\n", x, y, z, diff, relDiff);
+    return 0
